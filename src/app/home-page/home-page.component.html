@@ -1,0 +1,27 @@
+<div>
+  <h1>Lorem ipsum</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <br>
+  <form class="card" [formGroup]="form" >
+  <div class="container">
+    <div>
+      <mat-radio-group formControlName="radio" class="example-radio-group" aria-label="Select an option">
+        <mat-radio-button value="Полностью согласен">Полностью согласен</mat-radio-button>
+        <mat-radio-button value="Согласен">Согласен</mat-radio-button>
+        <mat-radio-button value="Не согласен">Не согласен</mat-radio-button>
+        <mat-radio-button value="Разрешаю красить в синий цвет">Разрешаю красить в синий цвет</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Оставьте комментарий</mat-label>
+        <textarea matInput formControlName="comment"></textarea>
+      </mat-form-field>
+
+    </div>
+
+  </div>
+  </form>
+  <button class="mybutton bg-success" (click)="submit(1)">Утвердить</button>
+  <button class="mybutton alert-danger" (click)="submit(0)">Отклонить</button>
+</div>
